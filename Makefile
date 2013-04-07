@@ -221,7 +221,6 @@ $(TODO):
 	-@for f in $(ALL_FILES); do fgrep -H -e TODO -e FIXME $$f; done; true
 
 $(SHOW):
-	$(ECHO) $(LD)
 	$(ECHO) "HEADERS : " $(HEADERS) "\n"
 	$(ECHO) "SOURCES : " $(SOURCES) "\n"
 	$(ECHO) "OBJECTS : " $(OBJECTS) "\n"

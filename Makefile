@@ -156,7 +156,8 @@ EXTERN_LIB_FLAGS += $(foreach dir, $(EXTERN_LIB_DIR), -L$(dir))
 HDRS = $(HDR_FLAGS) $(EXTERN_HDR_FLAGS)
 LIBS = $(LIB_FLAGS) $(EXTERN_LIB_FLAGS)
 
-### 
+### // COMPILATION & LINKING FLAGS
+
 
 ### MAKEFILE TARGETS
 
@@ -205,7 +206,7 @@ $(RELEASE): $(ALL)
 
 $(PROFILE): CFLAGS  += -g3 -O0 -pg
 $(PROFILE): LDFLAGS += -O0 -pg
-$(PROFILE):	$(ALL)
+$(PROFILE): $(ALL)
 
 $(RUN): $(ALL)
 	@export LD_LIBRARY_PATH=$(LIB_DIR) && $(TARGET)
